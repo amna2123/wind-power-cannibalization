@@ -1,6 +1,42 @@
 """
-Compute wind capture price (unit revenue) for regional NetCDF files
-using hourly electricity prices.
+Calculate wind capture price from hourly generation and electricity prices.
+
+This script computes the capture price (also known as unit revenue) for wind
+power generation across multiple European regions and years. The capture price
+represents the average electricity price weighted by hourly generation, which
+captures the economic value wind power receives in the market.
+
+Capture Price = Sum(Generation_t * Price_t) / Sum(Generation_t)
+
+Inputs:
+    - Regional wind power NetCDF files from data/processed/regions/
+      Format: wp_{region}_{year}.nc
+    - Hourly electricity price CSV files from data/raw/prices/
+      Format: {Country}.csv with columns:
+        - Datetime (UTC): timestamp in UTC
+        - Price (EUR/MWhe): day-ahead market price
+
+Outputs:
+    - NetCDF files with capture price for each region and year
+      in data/processed/capture_price/
+      Format: capture_price_{region}_{year}.nc
+
+The script processes each year and region independently, matching wind generation
+timestamps with electricity prices for the corresponding country/bidding zone.
+
+Usage:
+    python calculate_capture_price.py
+
+Dependencies:
+    - xarray: for NetCDF file handling
+    - pandas: for time series operations
+    - numpy: for numerical operations
+
+Notes:
+    - All timestamps must be in UTC timezone
+    - Missing price data is handled by nearest neighbor interpolation
+    - Generation data units are assumed to be capacity factors (0-1)
+    - Prices are assumed to be in EUR/MWh
 """
 
 import xarray as xr

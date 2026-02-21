@@ -6,7 +6,7 @@ Inputs:
 - NetCDF file with correlation coefficients
 - NetCDF file with OLS regression slopes
 - Country-level shapefiles for Europe
-
+"""
 
 import os
 import numpy as np

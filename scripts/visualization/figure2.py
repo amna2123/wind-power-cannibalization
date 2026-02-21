@@ -1,5 +1,49 @@
 """
-validation
+Generate Figure 2: Model validation comparing simulated and observed capacity factors.
+
+This script produces a comprehensive validation figure demonstrating the accuracy
+of the ERA5-based wind power model against observed capacity factors from actual
+wind farms across multiple European countries. The figure includes:
+    
+    - Time series comparison plots for each country
+    - Scatter plots showing observed vs. simulated correlations
+    - Statistical metrics (R-squared, correlation, RMSE, MBE)
+    - Shared temporal axis for direct comparison
+
+Validation Metrics:
+    - R²: Coefficient of determination (goodness of fit)
+    - r: Pearson correlation coefficient
+    - RMSE: Root mean square error (capacity factor units)
+    - MBE: Mean bias error (capacity factor units)
+
+Inputs:
+    - Validation.xlsx file containing:
+        * "Observed CF" sheet: observed capacity factors from wind farms
+        * "Simulated CF" sheet: simulated capacity factors from ERA5
+    - Columns: timestamp + one column per country (ISO 2-letter codes)
+    - Temporal coverage: hourly data from 2015-2019
+
+Outputs:
+    - Figure 2 as high-resolution PNG (300 DPI)
+      Location: figures/figure2.png
+    - Multi-panel layout with time series and scatter plots
+    - Publication-ready formatting
+
+Usage:
+    python figure2.py
+
+Dependencies:
+    - pandas: for reading Excel and time series processing
+    - matplotlib: for creating publication-quality figures
+    - numpy: for numerical operations and statistics
+    - scikit-learn: for linear regression metrics
+
+Notes:
+    - Data is temporally aligned and filtered to common timestamps
+    - Capacity factors are clipped to maximum of 0.95 (data quality control)
+    - Missing data is handled by dropping NaN values
+    - Statistical metrics are computed on overlapping valid timestamps only
+"""
 
 # ======================================================
 # IMPORTS

@@ -1,8 +1,54 @@
 """
-Compute wind value factor (VF) for regional NetCDF files.
+Calculate wind value factor from capture price and baseload price.
 
-Value factor is defined as the ratio between the wind capture price
-and the annual baseload electricity price.
+This script computes the value factor (VF) for wind power generation across
+multiple European regions and years. The value factor quantifies the degree of
+market value cannibalization by comparing the wind capture price to the average
+baseload electricity price.
+
+Value Factor = Capture Price / Baseload Price
+
+Where:
+    - Capture Price: average electricity price weighted by hourly generation
+    - Baseload Price: simple average of electricity prices over the year
+
+A value factor below 1.0 indicates cannibalization, meaning wind power receives
+less than the average market price. This occurs when wind generation is
+correlated with periods of lower electricity prices.
+
+Inputs:
+    - Regional wind power NetCDF files from data/processed/regions/
+      Format: wp_{region}_{year}.nc
+    - Hourly electricity price CSV files from data/raw/prices/
+      Format: {Country}.csv with columns:
+        - Datetime (UTC): timestamp in UTC
+        - Price (EUR/MWhe): day-ahead market price
+
+Outputs:
+    - NetCDF files with capture price, baseload price, and value factor
+      for each region and year in data/processed/value_factor/
+      Format: value_factor_{region}_{year}.nc
+      Variables:
+        - capture_price: weighted average price (EUR/MWh)
+        - baseload_price: arithmetic mean price (EUR/MWh)
+        - value_factor: ratio (dimensionless)
+
+The script processes each year and region independently, matching wind generation
+timestamps with electricity prices for the corresponding country/bidding zone.
+
+Usage:
+    python calculate_value_factor.py
+
+Dependencies:
+    - xarray: for NetCDF file handling
+    - pandas: for time series operations
+    - numpy: for numerical operations
+
+Notes:
+    - All timestamps must be in UTC timezone
+    - Missing price data is handled by nearest neighbor interpolation
+    - Generation data units are assumed to be capacity factors (0-1)
+    - Prices are assumed to be in EUR/MWh
 """
 
 import xarray as xr

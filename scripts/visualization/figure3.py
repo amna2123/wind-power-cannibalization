@@ -4,11 +4,12 @@ Overlay with onshore wind farm locations
 """
 
 from pathlib import Path
-import xarray as xr
+
 import geopandas as gpd
-import rioxarray
 import matplotlib.pyplot as plt
 import pandas as pd
+import rioxarray
+import xarray as xr
 
 # =====================================================
 # PROJECT DIRECTORIES
@@ -16,7 +17,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent
 
 DATA_DIR   = BASE_DIR / "data"
-SHAPE_DIR  = BASE_DIR / "shapefiles"
+SHAPE_DIR  = BASE_DIR / "data" / "shapefiles"
 OUTPUT_DIR = BASE_DIR / "figures"
 
 OUTPUT_DIR.mkdir(exist_ok=True)

@@ -1,0 +1,33 @@
+{
+  "title": "Wind Power Cannibalization Analysis",
+  "description": "Computational scripts for analyzing wind power cannibalization effects in European electricity markets. This repository contains the code accompanying the research article published in Nature Energy.",
+  "license": "MIT",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "LastName, FirstName",
+      "affiliation": "University of Bremen",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "keywords": [
+    "wind power",
+    "renewable energy",
+    "electricity markets",
+    "cannibalization",
+    "value factor",
+    "capture price",
+    "ERA5",
+    "Europe"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.XXXX/XXXXX",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "version": "1.0.0",
+  "language": "eng"
+}

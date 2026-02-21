@@ -1,12 +1,13 @@
 from pathlib import Path
+
+import cartopy.crs as ccrs
+import geopandas as gpd
+import matplotlib.colors as colors
+import matplotlib.pyplot as plt
 import numpy as np
 import xarray as xr
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import matplotlib.colors as colors
-from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 from matplotlib.gridspec import GridSpec
+from matplotlib.ticker import FormatStrFormatter, MultipleLocator
 from shapely.geometry import Point
 from shapely.prepared import prep
 
@@ -18,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR  = BASE_DIR / "data"
 CP_DIR    = DATA_DIR / "capture_price"
 ANOM_DIR  = DATA_DIR / "anomalies"
-SHP_DIR   = BASE_DIR / "shapefiles"
+SHP_DIR   = BASE_DIR / "data" / "shapefiles"
 OUT_DIR   = BASE_DIR / "figures"
 
 OUT_DIR.mkdir(exist_ok=True)

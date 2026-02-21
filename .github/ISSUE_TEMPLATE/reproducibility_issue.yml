@@ -1,0 +1,86 @@
+name: Reproducibility Issue
+description: Report difficulty reproducing published results or analysis steps
+title: "[Reproducibility]: "
+labels: ["reproducibility", "needs-investigation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the reproducibility of this research. Please provide details about what you're trying to reproduce and what issues you encountered.
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Analysis Stage
+      description: Which stage of the analysis are you having trouble with?
+      options:
+        - Data acquisition
+        - Data processing (wind power conversion)
+        - Regional extraction
+        - Capture price calculation
+        - Value factor calculation
+        - Figure generation
+        - Complete workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Describe the reproducibility issue
+      placeholder: What results or steps cannot be reproduced?
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: Steps Attempted
+      description: What have you tried to resolve this?
+      placeholder: |
+        1. Followed WORKFLOW.md section X
+        2. Used data from source Y
+        3. Observed different results
+    validations:
+      required: true
+
+  - type: textarea
+    id: difference
+    attributes:
+      label: Observed Differences
+      description: How do your results differ from expected/published results?
+      placeholder: Describe numerical differences, missing outputs, or other discrepancies
+
+  - type: textarea
+    id: data-info
+    attributes:
+      label: Data Information
+      description: Information about the data you're using
+      placeholder: |
+        - Data source: ERA5/other
+        - Time period: 2015-2024
+        - Spatial coverage: full/subset
+        - File sizes: approximately...
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please verify you've checked these items
+      options:
+        - label: I've read DATA.md and WORKFLOW.md
+          required: true
+        - label: I'm using the correct Python version (3.10+)
+          required: true
+        - label: All dependencies are installed from requirements.txt
+          required: true
+        - label: Input data matches the specifications in DATA.md
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might be relevant

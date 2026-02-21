@@ -1,0 +1,51 @@
+name: Question
+description: Ask a question about the code, methodology, or usage
+title: "[Question]: "
+labels: ["question"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask questions about how to use the code, understand the methodology, or interpret results.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      options:
+        - Methodology and Approach
+        - Code Usage
+        - Data Requirements
+        - Results Interpretation
+        - Installation and Setup
+        - Performance and Optimization
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Please be as specific as possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Additional context that might help us answer your question
+      placeholder: What have you already tried? What documentation have you consulted?
+
+  - type: checkboxes
+    id: documentation
+    attributes:
+      label: Documentation Consulted
+      description: Which documentation have you already reviewed?
+      options:
+        - label: README.md
+        - label: WORKFLOW.md
+        - label: DATA.md
+        - label: CONTRIBUTING.md

@@ -1,13 +1,14 @@
 from pathlib import Path
+
+import cartopy.crs as ccrs
+import geopandas as gpd
+import matplotlib.colors as colors
+import matplotlib.pyplot as plt
 import numpy as np
 import xarray as xr
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import cartopy.crs as ccrs
-import matplotlib.colors as colors
-from scipy.stats import linregress
 from matplotlib.lines import Line2D
 from matplotlib.ticker import FormatStrFormatter
+from scipy.stats import linregress
 
 # ======================================================
 # PATHS
@@ -15,7 +16,7 @@ from matplotlib.ticker import FormatStrFormatter
 BASE_DIR = Path(__file__).resolve().parent
 
 DATA_DIR   = BASE_DIR / "data" / "value_factor"
-SHAPE_DIR  = BASE_DIR / "shapefiles" / "countries"
+SHAPE_DIR  = BASE_DIR / "data" / "shapefiles" / "countries"
 OUT_DIR    = BASE_DIR / "figures"
 
 OUT_DIR.mkdir(exist_ok=True)
