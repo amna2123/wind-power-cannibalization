@@ -189,6 +189,25 @@ Users are responsible for complying with data licenses:
 - ENTSO-E: Transparency platform terms of use
 - Ensure proper attribution in publications
 
+## Processed Data Availability
+
+The complete processed dataset (wind power generation, capture prices, and value factors for 2015-2024) is available on Zenodo:
+
+**DOI**: [10.5281/zenodo.18733902](https://doi.org/10.5281/zenodo.18733902)
+
+**Title**: Wind Power Cannibalization in Europe - Processed Data
+
+**Authors**: Bibi, Amna; Shafeeque, Muhammad
+
+**Contents**:
+- Gridded wind power generation for Europe (2015-2024)
+- Regional wind power extracts
+- Capture price calculations by country and region
+- Value factor time series
+- Zonal aggregations for multi-zone countries
+
+This dataset can be used to reproduce the analysis without reprocessing the raw ERA5 data.
+
 ## Support
 
 For questions about data preparation or issues with data compatibility, please open an issue on the GitHub repository.

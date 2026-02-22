@@ -1,5 +1,5 @@
 """
-Shared configuration constants for wind power cannibalization analysis.
+Shared configuration constants for Wind Power Cannibalization in Europe.
 
 This module contains common parameters, file paths, and mappings
 used across multiple analysis and visualization scripts.

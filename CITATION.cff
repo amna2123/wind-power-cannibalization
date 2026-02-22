@@ -1,26 +1,33 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "Wind Power Cannibalization Analysis"
+title: "Wind Power Cannibalization in Europe"
 abstract: "Computational scripts for analyzing wind power cannibalization effects in European electricity markets."
 authors:
-  - family-names: "LastName"
-    given-names: "FirstName"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Bibi"
+    given-names: "Amna"
+    affiliation: "University of Bremen; Pakistan Meteorological Department"
+    orcid: "https://orcid.org/0009-0004-2109-9246"
+  - family-names: "Shafeeque"
+    given-names: "Muhammad"
+    affiliation: "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung; University of Bremen"
+    orcid: "https://orcid.org/0000-0002-2152-6672"
 repository-code: "https://github.com/amna2123/wind-power-cannibalization"
 license: MIT
 version: 1.0.0
-date-released: 2026-02-21
+date-released: 2026-02-22
 keywords:
   - wind power
   - renewable energy
   - electricity markets
 references:
   - type: article
-    title: "Article Title"
+    title: "Wind Power Cannibalization in Europe"
     authors:
-      - family-names: "LastName"
-        given-names: "FirstName"
-    # doi: "10.XXXX/XXXXX"
-    journal: "Journal Name"
+      - family-names: "Bibi"
+        given-names: "Amna"
+      - family-names: "Shafeeque"
+        given-names: "Muhammad"
+    # doi: "10.XXXX/XXXXX"  # Update when article DOI is available
+    journal: "Journal Name"  # Update with journal name when published
     year: 2026

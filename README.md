@@ -236,19 +236,33 @@ pytest tests/ -v -m "not integration"
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you use this code in your research, please cite:
 
+**Software:**
 ```bibtex
-@article{windcannibalization2026,
-  title={Wind Power Cannibalization in European Electricity Markets},
-  author={TBD},
-  journal={TBD},
-  year={2026},
-  doi={TBD}
+@software{bibi_shafeeque_2026_windcannibalization,
+  author = {Bibi, Amna and Shafeeque, Muhammad},
+  title = {Wind Power Cannibalization in Europe},
+  year = {2026},
+  publisher = {GitHub},
+  url = {https://github.com/amna2123/wind-power-cannibalization},
+  version = {1.0.0}
 }
 ```
 
-See `CITATION.cff` for additional citation formats.
+**Processed Data:**
+```bibtex
+@dataset{bibi_shafeeque_2026_data,
+  author = {Bibi, Amna and Shafeeque, Muhammad},
+  title = {Wind Power Cannibalization in Europe - Processed Data},
+  year = {2026},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.18733902},
+  url = {https://doi.org/10.5281/zenodo.18733902}
+}
+```
+
+See [CITATION.cff](CITATION.cff) for additional citation formats.
 
 ## License
 

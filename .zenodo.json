@@ -1,13 +1,18 @@
 {
-  "title": "Wind Power Cannibalization Analysis",
-  "description": "Computational scripts for analyzing wind power cannibalization effects in European electricity markets. This repository contains the code accompanying the research article published in Nature Energy.",
+  "title": "Wind Power Cannibalization in Europe",
+  "description": "Computational scripts for analyzing wind power cannibalization effects in European electricity markets. This repository contains the code accompanying the research article on wind power cannibalization in Europe.",
   "license": "MIT",
   "upload_type": "software",
   "creators": [
     {
-      "name": "LastName, FirstName",
-      "affiliation": "University of Bremen",
-      "orcid": "0000-0000-0000-0000"
+      "name": "Bibi, Amna",
+      "affiliation": "University of Bremen; Pakistan Meteorological Department",
+      "orcid": "0009-0004-2109-9246"
+    },
+    {
+      "name": "Shafeeque, Muhammad",
+      "affiliation": "Alfred-Wegener-Institut Helmholtz-Zentrum f\u00fcr Polar- und Meeresforschung; University of Bremen",
+      "orcid": "0000-0002-2152-6672"
     }
   ],
   "keywords": [
@@ -25,6 +30,12 @@
       "relation": "isSupplementTo",
       "identifier": "10.XXXX/XXXXX",
       "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.18733902",
+      "resource_type": "dataset",
       "scheme": "doi"
     }
   ],

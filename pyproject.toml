@@ -6,7 +6,8 @@ readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [
-    {name = "FirstName LastName", email = "firstname.lastname@institution.edu"}
+    {name = "Amna Bibi"},
+    {name = "Muhammad Shafeeque"}
 ]
 keywords = [
     "wind power",
