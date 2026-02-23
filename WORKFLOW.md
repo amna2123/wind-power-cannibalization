@@ -34,7 +34,7 @@ python scripts/computations/wind_power_from_speed.py
 
 **Duration:** ~5-15 minutes per year (depends on domain size)
 
-**Purpose:** Transforms gridded wind speed into wind power using a generic turbine power curve.
+**Purpose:** Transforms gridded wind speed into wind power potential using a generic turbine power curve.
 
 ### Step 2: Extract Regional Subsets
 
@@ -102,63 +102,63 @@ python scripts/computations/compute_value_factor_zonal.py
 
 Once data processing is complete, generate publication figures. These can be run in any order or in parallel.
 
-### Figure 2: Model Validation
+### Figure 2: Wind Power Production Potential
 
 ```bash
 python scripts/visualization/figure2.py
 ```
 
-**Purpose:** Validates simulated wind power against observed capacity factors.
+**Purpose:** Mean annual wind power generation potential across Europe (2015-2024).
 
 **Output:** `figures/figure2.png`
 
-### Figure 3: Temporal Analysis
+### Figure 3: Validation
 
 ```bash
 python scripts/visualization/figure3.py
 ```
 
-**Purpose:** Analyzes temporal patterns in wind generation and value factors.
+**Purpose:** Validates simulated wind power against observed capacity factors.
 
 **Output:** `figures/figure3.png`
 
-### Figure 4: Spatial Patterns
+### Figure 4: Spatial Patterns of Capture Price
 
 ```bash
 python scripts/visualization/figure4.py
 ```
 
-**Purpose:** Maps spatial distribution of wind resources and value factors.
+**Purpose:** Maps spatial distribution of capture price.
 
 **Output:** `figures/figure4.png`
 
-### Figure 5: Value Factor Trends
+### Figure 5: Value Factor 
 
 ```bash
 python scripts/visualization/figure5.py
 ```
 
-**Purpose:** Examines long-term trends in value factors across regions.
+**Purpose:** Examines value factors across regions.
 
 **Output:** `figures/figure5.png`
 
-### Figure 6: Market Correlation Analysis
+### Figure 6: Quantifying Cannibalization
 
 ```bash
 python scripts/visualization/figure6.py
 ```
 
-**Purpose:** Analyzes correlation between wind deployment and market value.
+**Purpose:** Annual evolution of wind value factors and wind generation shares across European countries.
 
 **Output:** `figures/figure6.png`
 
-### Figure 7: Geographic Visualization
+### Figure 7: Correlation
 
 ```bash
 python scripts/visualization/figure7.py
 ```
 
-**Purpose:** Creates comprehensive geographic visualization of results.
+**Purpose:** Spatial relationship between wind power value factors and wind generation potential.
 
 **Output:** `figures/figure7.png`
 
