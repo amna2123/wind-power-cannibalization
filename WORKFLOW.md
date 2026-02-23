@@ -87,7 +87,7 @@ python scripts/computations/calculate_value_factor.py
 
 **Purpose:** Computes value factors as the ratio of capture price to baseload price.
 
-### Step 5: Compute Zonal Aggregations (Optional)
+### Step 5: Compute Zonal Capture Price and Value Factor
 
 For countries with multiple bidding zones:
 
@@ -96,7 +96,7 @@ python scripts/computations/compute_capture_price_zonal.py
 python scripts/computations/compute_value_factor_zonal.py
 ```
 
-**Purpose:** Aggregates results for countries with zonal electricity markets (Denmark, Italy, Norway, Sweden).
+**Purpose:** Results for countries with zonal electricity markets (Denmark, Italy, Norway, Sweden).
 
 ## Phase 2: Figure Generation
 
